@@ -1,0 +1,46 @@
+---
+title: "Vignette (Details) of FarsData Package"
+author: "Lock Hong Quan"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### Summary
+
+This package would be useful for the following purposes -- 
+(1) To read and process data from the Fatality Analysis Reporting System (FARS) run by the US National Highway Traffic Safety Administration. 
+(2) To provide summary statistics of FARS traffic accident data (drilling down to state-level and monthly statistics) 
+(3) To provide map plots of traffic accidents for any US state in a given year.
+
+### Basic Information on FarsData Package
+
+The following packages are required for the FarsData Package. The specific functions needed have been imported and can be found in the NAMESPACE file. 
+```{r eval=FALSE}
+library(dplyr)
+library(maps)
+library(readr)
+library(tidyr)
+```
+This package is maintained by Lock Hong Quan. He can be contacted at lockhq[at]hotmail[dot]com.
+
+###Description of functions
+We will now proceed to describe the purpose of the respective functions
+
+####fars_read()
+This function reads data file, specifically data file from the FARS system. This is similar to your read.csv() functions. The file should be present in the working directory. If the file path is incorrect, the function will return a "does not exist" error.
+
+####make_filename
+This is an intermediary function that shouldn't be used too often. It serves to standardise the names of the files uploaded, to the year of the accidents in the data set. 
+
+####fars_read_years
+This is another intermediary function that shouldn't be used too often. It lists out all the month-year combinations of accidents stored in the dataset. 
+
+####fars_summarise_years
+This function tabulates the number of accidents that happened in the particular month-year combination. For instance it might tell you the number of accidents that happened in Dec 2015. (For further details on the syntax, please see the MAN directory)
+
+####fars_map_state
+This functions does a map plot of all the accidents that happened in a given US state for the given year. Hence the US State (represented by a number, as used by the US National Highway TSA in the FARS Data Set) and the year must be given as inputs. (For further details on the syntax, please see the MAN directory)

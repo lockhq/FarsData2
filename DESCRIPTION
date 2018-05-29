@@ -1,0 +1,14 @@
+Package: FARSData
+Type: Package
+Title: Graphical Plot and other Summary Statistics of US Highway Traffic Accidents
+Version: 1.0
+Author: Lock Hong Quan (with codes for function from Coursera)
+Maintainer: Lock Hong Quan <lockhq@hotmail.com>
+Description: This package would be useful for the following purposes -- (1) to read and process data from the Fatality Analysis Reporting System (FARS) run by the US National Highway Traffic Safety Administration. (2) to provide summary statistics of FARS traffic accident data (drilling down to state-level and monthly statistics) (3) to provide map plots of traffic accidents for any US state in a given year.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: dplyr, maps, readr, tidyr
+Suggests: knitr, rmarkdown, testthat
+VignetteBuilder: knitr
