@@ -4,3 +4,4 @@ Done by Lock Hong Quan
 
 Travis Badge
 [![Build Status](https://travis-ci.com/lockhq/FarsData2.svg?branch=master)](https://travis-ci.com/lockhq/FarsData2)
+
